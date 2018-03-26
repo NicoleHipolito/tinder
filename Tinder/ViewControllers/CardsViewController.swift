@@ -49,8 +49,8 @@ class CardsViewController: UIViewController {
             }
             else{
                 print("left panning")
-                profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(Double(translation.x-50) * Double.pi / 180))
-                profilePic.transform = profilePic.transform.rotated(by: CGFloat(Double(translation.x-50) * Double.pi / 180))
+//                profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(Double(translation.x-50) * Double.pi / 180))
+//                profilePic.transform = profilePic.transform.rotated(by: CGFloat(Double(translation.x-50) * Double.pi / 180))
 //                profilePic.center = CGPoint(x: cardInitialCenter.x + translation.x, y: cardInitialCenter.y)
             }
             
@@ -62,6 +62,9 @@ class CardsViewController: UIViewController {
             print("ended panning")
             let radians = atan2(profilePic.transform.b, profilePic.transform.a)
             let degrees = Double(radians * 180) / Double.pi
+            if(degrees < 45 && degrees > -45){
+                profilePic.transform = CGAffineTransform.identity
+            }
             print(degrees)
             
         }
