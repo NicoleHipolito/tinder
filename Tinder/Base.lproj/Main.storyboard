@@ -48,9 +48,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="profilePic" destination="I7c-DG-jb1" id="qmL-1G-7nD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="DoS-p4-SzF"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="DoS-p4-SzF">
+                    <connections>
+                        <action selector="didMovePic:" destination="BYZ-38-t0r" id="eJb-tt-jZv"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>

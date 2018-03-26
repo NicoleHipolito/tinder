@@ -12,6 +12,8 @@ class CardsViewController: UIViewController {
 
     var cardInitialCenter: CGPoint!
     
+    @IBOutlet weak var profilePic: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +25,36 @@ class CardsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didMovePic(_ sender: UIPanGestureRecognizer) {
+        var isLeft = true
+        let rotation = sender.translation(in: <#T##UIView?#>)
+        profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(1 * Double.pi / 180))
+        profilePic.transform = profilePic.transform.rotated(by: CGFloat(1 * Double.pi / 180))
+        if sender.state == .began{
+            print("started panning")
+            cardInitialCenter = profilePic.center
+//            if(...)
+//                isLeft = false
+        }
+        else if sender.state == .changed{
+//            if(isLeft){
+//
+//            }
+//            else{
+//
+//            }
+            print("still panning")
+            profilePic.center = CGPoint(x: cardInitialCenter.x, y: cardInitialCenter.y)
+            
 
+        }
+        else if sender.state == .ended{
+            print("ended panning")
+        }
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 
