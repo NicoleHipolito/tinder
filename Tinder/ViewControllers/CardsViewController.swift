@@ -27,29 +27,43 @@ class CardsViewController: UIViewController {
     
     @IBAction func didMovePic(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
-        
+//        let rotation = sender.
         if sender.state == .began{
             print("started panning")
             cardInitialCenter = profilePic.center
             
         }
         else if sender.state == .changed{
+            let radians = atan2(profilePic.transform.b, profilePic.transform.a)
+            let degrees = Double(radians * 180) / Double.pi
             if translation.x > 50{
                 print("right panning")
-                profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(1 * Double.pi / 180))
-                profilePic.transform = profilePic.transform.rotated(by: CGFloat(1 * Double.pi / 180))
+                profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(Double(translation.x-50) * Double.pi / 180))
+                profilePic.transform = profilePic.transform.rotated(by: CGFloat(Double(translation.x-50) * Double.pi / 180))
+//                profilePic.center = CGPoint(x: cardInitialCenter.x + translation.x, y: cardInitialCenter.y)
+                if(degrees >= 45){
+//                    profilePic.
+                    profilePic.center = CGPoint(x: cardInitialCenter.x + 40000, y: cardInitialCenter.y)
+                }
 
             }
             else{
                 print("left panning")
-                profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(-1 * Double.pi / 180))
-                profilePic.transform = profilePic.transform.rotated(by: CGFloat(-1 * Double.pi / 180))
+                profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(Double(translation.x-50) * Double.pi / 180))
+                profilePic.transform = profilePic.transform.rotated(by: CGFloat(Double(translation.x-50) * Double.pi / 180))
+//                profilePic.center = CGPoint(x: cardInitialCenter.x + translation.x, y: cardInitialCenter.y)
             }
+            
+            
 //            profilePic.center = CGPoint(x: cardInitialCenter.x, y: cardInitialCenter.y)
             
         }
         else if sender.state == .ended{
             print("ended panning")
+            let radians = atan2(profilePic.transform.b, profilePic.transform.a)
+            let degrees = Double(radians * 180) / Double.pi
+            print(degrees)
+            
         }
         
         
