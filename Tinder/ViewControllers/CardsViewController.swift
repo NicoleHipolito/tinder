@@ -36,19 +36,52 @@ class CardsViewController: UIViewController {
         else if sender.state == .changed{
             let radians = atan2(profilePic.transform.b, profilePic.transform.a)
             let degrees = Double(radians * 180) / Double.pi
-            if translation.x > 50{
+            // Optionally initialize the property to a desired starting value
+//            print(translation.x)
+            print(translation.y)
+            if translation.x > 0{
                 print("right panning")
-                profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(Double(translation.x-50) * Double.pi / 180))
-                profilePic.transform = profilePic.transform.rotated(by: CGFloat(Double(translation.x-50) * Double.pi / 180))
+//                profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(Double(translation.x-45) * Double.pi / 180))
+//                profilePic.transform = profilePic.transform.rotated(by: CGFloat(Double(translation.x-45) * Double.pi / 180))
 //                profilePic.center = CGPoint(x: cardInitialCenter.x + translation.x, y: cardInitialCenter.y)
-                if(degrees >= 45){
+//                if(degrees == 50){
 //                    profilePic.
-                    profilePic.center = CGPoint(x: cardInitialCenter.x + 40000, y: cardInitialCenter.y)
+                if(translation.y > 0){
+                    self.profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(Double(translation.x) * Double.pi / 180))
+                    self.profilePic.transform = self.profilePic.transform.rotated(by: CGFloat(Double(translation.x) * Double.pi / 180))
                 }
-
+                else{
+                    self.profilePic.transform = CGAffineTransform(rotationAngle: -CGFloat(Double(translation.x) * Double.pi / 180))
+                    self.profilePic.transform = self.profilePic.transform.rotated(by: -CGFloat(Double(translation.x) * Double.pi / 180))
+                }
+                
+//                    UIView.animate(withDuration:0.8, delay: 0.0,
+//                                   // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+////                        options: [.autoreverse,.repeat],
+//                        animations: { () -> Void in
+//                            self.profilePic.transform = CGAffineTransform(translationX: 50, y: 0.1)
+//                            self.profilePic.transform = self.profilePic.transform.translatedBy(x: 50, y: 0.1)
+//                    }, completion: nil)
             }
             else{
                 print("left panning")
+                if(translation.y > 0){
+                    self.profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(Double(translation.x) * Double.pi / 180))
+                    self.profilePic.transform = self.profilePic.transform.rotated(by: CGFloat(Double(translation.x) * Double.pi / 180))
+                }
+                else{
+                    self.profilePic.transform = CGAffineTransform(rotationAngle: -CGFloat(Double(translation.x) * Double.pi / 180))
+                    self.profilePic.transform = self.profilePic.transform.rotated(by: -CGFloat(Double(translation.x) * Double.pi / 180))
+                }
+//                UIView.animate(withDuration:0.8, delay: 0.0,
+//                               // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+////                    options: [.autoreverse,.repeat],
+//                    animations: { () -> Void in
+//                        //                            self.profilePic.transform = CGAffineTransform(translationX: 0, y: 10)
+//                }, completion: nil)
+                //                    profilePic.center = CGPoint(x: translation.x-50, y: cardInitialCenter.y)
+                //                }
+
 //                profilePic.transform = CGAffineTransform(rotationAngle: CGFloat(Double(translation.x-50) * Double.pi / 180))
 //                profilePic.transform = profilePic.transform.rotated(by: CGFloat(Double(translation.x-50) * Double.pi / 180))
 //                profilePic.center = CGPoint(x: cardInitialCenter.x + translation.x, y: cardInitialCenter.y)
@@ -62,9 +95,11 @@ class CardsViewController: UIViewController {
             print("ended panning")
             let radians = atan2(profilePic.transform.b, profilePic.transform.a)
             let degrees = Double(radians * 180) / Double.pi
-            if(degrees < 45 && degrees > -45){
-                profilePic.transform = CGAffineTransform.identity
-            }
+            UIView.animate(withDuration:0.1, delay: 0.0, animations: { () -> Void in
+//            if(degrees < 60 && degrees > -60){
+                self.profilePic.transform = CGAffineTransform.identity
+//            }
+            }, completion: nil)
             print(degrees)
             
         }
