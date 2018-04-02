@@ -73,7 +73,8 @@ class CardsViewController: UIViewController {
                         animations: { () -> Void in
                             print("Degrees: ", degrees)
                             self.profilePic.transform = CGAffineTransform(translationX: -1000, y: 0.1)
-                            self.profilePic.transform = self.profilePic.transform.translatedBy(x: -1000, y: 10)
+                            //self.profilePic.transform = self.profilePic.transform.translatedBy(x: -1000, y: 10)
+                            self.profilePic.removeFromSuperview()
                             
                     }, completion: nil)
                 }
@@ -106,7 +107,8 @@ class CardsViewController: UIViewController {
                         //                        options: [.autoreverse,.repeat],
                         animations: { () -> Void in
                             self.profilePic.transform = CGAffineTransform(translationX: 1000, y: 0.1)
-                            self.profilePic.transform = self.profilePic.transform.translatedBy(x: 1000, y: 0.1)
+                            //self.profilePic.transform = self.profilePic.transform.translatedBy(x: 1000, y: 0.1)
+                            self.profilePic.removeFromSuperview()
                             
                     }, completion: nil)
                 }
@@ -117,7 +119,8 @@ class CardsViewController: UIViewController {
                         animations: { () -> Void in
                             //                            self.profilePic.transform = CGAffineTransform(translationX: 50, y: 0.1)
                             self.profilePic.transform = CGAffineTransform(translationX: -1000, y: 0.1)
-                            self.profilePic.transform = self.profilePic.transform.translatedBy(x: -1000, y: 0.1)
+                            //self.profilePic.transform = self.profilePic.transform.translatedBy(x: -1000, y: 0.1)
+                            self.profilePic.removeFromSuperview()
                     }, completion: nil)
             }
             
