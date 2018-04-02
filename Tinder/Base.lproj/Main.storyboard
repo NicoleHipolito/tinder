@@ -50,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="profilePic" destination="I7c-DG-jb1" id="qmL-1G-7nD"/>
+                        <segue destination="43S-Wa-WlJ" kind="presentation" identifier="toPictureSegue" id="cqy-fe-92Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -61,10 +62,50 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="IhW-k5-TO1">
+            <objects>
+                <viewController id="43S-Wa-WlJ" customClass="ProfileViewController" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FO3-sF-Up3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eWS-1o-ejR">
+                                <rect key="frame" x="16" y="78" width="343" height="345"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="ghk-Vc-Ngk"/>
+                                    <constraint firstAttribute="height" constant="345" id="pMh-jI-g6U"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="nav_bar2" translatesAutoresizingMaskIntoConstraints="NO" id="Sz7-Pi-Ui5">
+                                <rect key="frame" x="16" y="-1" width="343" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xsM-UJ-wkE" firstAttribute="bottom" secondItem="eWS-1o-ejR" secondAttribute="bottom" constant="244" id="4yo-J3-2aW"/>
+                            <constraint firstItem="xsM-UJ-wkE" firstAttribute="trailing" secondItem="eWS-1o-ejR" secondAttribute="trailing" constant="16" id="Rzq-aS-iK6"/>
+                            <constraint firstItem="eWS-1o-ejR" firstAttribute="top" secondItem="xsM-UJ-wkE" secondAttribute="top" constant="58" id="ZWb-68-VYI"/>
+                            <constraint firstItem="eWS-1o-ejR" firstAttribute="leading" secondItem="xsM-UJ-wkE" secondAttribute="leading" constant="16" id="iQo-O0-MLs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xsM-UJ-wkE"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneImage" destination="Sz7-Pi-Ui5" id="a2g-fq-99a"/>
+                        <outlet property="profilePic" destination="eWS-1o-ejR" id="gWT-7E-pWd"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="doneSegue" id="rC9-sU-Jpf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1I-nZ-BEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5999999999999" y="110.19490254872565"/>
+        </scene>
     </scenes>
     <resources>
         <image name="action_buttons" width="320" height="108"/>
         <image name="nav_bar" width="320" height="65"/>
+        <image name="nav_bar2" width="320" height="65"/>
         <image name="ryan" width="449" height="514"/>
     </resources>
 </document>

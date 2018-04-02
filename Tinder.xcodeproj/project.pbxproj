@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2841852E206892D700AB1BF6 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841852D206892D700AB1BF6 /* CardsViewController.swift */; };
+		2857C4B820719FEF00EBD71D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857C4B720719FEF00EBD71D /* ProfileViewController.swift */; };
 		28806EF7206890C70022C0A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28806EF6206890C70022C0A1 /* AppDelegate.swift */; };
 		28806EFC206890C70022C0A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28806EFA206890C70022C0A1 /* Main.storyboard */; };
 		28806EFE206890C80022C0A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28806EFD206890C80022C0A1 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		2841852D206892D700AB1BF6 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		2857C4B720719FEF00EBD71D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		28806EF3206890C70022C0A1 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28806EF6206890C70022C0A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28806EFB206890C70022C0A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				2841852D206892D700AB1BF6 /* CardsViewController.swift */,
+				2857C4B720719FEF00EBD71D /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2857C4B820719FEF00EBD71D /* ProfileViewController.swift in Sources */,
 				2841852E206892D700AB1BF6 /* CardsViewController.swift in Sources */,
 				28806EF7206890C70022C0A1 /* AppDelegate.swift in Sources */,
 			);
