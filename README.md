@@ -15,7 +15,7 @@ The following **required** user stories are complete:
 
 The following **stretch** user stories are implemented:
 
-- [ ] User can view profile - custom modal transition (+2pt)
+- [x] User can view profile - custom modal transition (+2pt)
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
@@ -26,13 +26,13 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='tinder1.gif' />
+<img src='Tinder.gif' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+It would probably be the disappearing animation. It was hard to make it as smooth as how it was shown in the sample gif but also the slow simulator we've been using did not help. 
 
 ## License
 
