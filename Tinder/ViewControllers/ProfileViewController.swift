@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
         self.performSegue(withIdentifier: "doneSegue", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "toPictureSegue"){
+        if(segue.identifier == "doneSegue"){
             let destinationVC = segue.destination as! CardsViewController
             destinationVC.modalPresentationStyle = UIModalPresentationStyle.custom
             // Create a new instance of your fadeTransition.

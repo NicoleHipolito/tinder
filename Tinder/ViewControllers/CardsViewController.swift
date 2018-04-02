@@ -44,8 +44,8 @@ class CardsViewController: UIViewController {
                 print("right panning")
                 if(degrees >= 50){
                     UIView.animate(withDuration:0.1, delay: 0.0,
-                                   //           Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
-                        //                        options: [.autoreverse,.repeat],
+           //           Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+//                        options: [.autoreverse,.repeat],
                         animations: { () -> Void in
                             print("Degrees: ", degrees)
                             self.profilePic.transform = CGAffineTransform(translationX: 1000, y: 0.1)
@@ -68,13 +68,12 @@ class CardsViewController: UIViewController {
                 print("left panning")
                 if(degrees <= -50){
                     UIView.animate(withDuration:0.1, delay: 0.0,
-                                   //           Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
-                        //                        options: [.autoreverse,.repeat],
+           //           Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+//                        options: [.autoreverse,.repeat],
                         animations: { () -> Void in
                             print("Degrees: ", degrees)
                             self.profilePic.transform = CGAffineTransform(translationX: -1000, y: 0.1)
-                            self.profilePic.transform = self.profilePic.transform.translatedBy(x: -1000, y: 10)
-                            
+                            self.profilePic.removeFromSuperview()
                     }, completion: nil)
                 }
                 if(translation.y > 0){
@@ -95,29 +94,26 @@ class CardsViewController: UIViewController {
             print("Degrees: ", degrees)
             if(degrees > -50 && degrees < 50){
                 UIView.animate(withDuration:0.1, delay: 0.0, animations: { () -> Void in
-                    //            if(degrees < 60 && degrees > -60){
                     self.profilePic.transform = CGAffineTransform.identity
-                    //            }
                 }, completion: nil)
             }
                 if(degrees >= 50){
                     UIView.animate(withDuration:0.1, delay: 0.0,
-                                   //           Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
-                        //                        options: [.autoreverse,.repeat],
+           //           Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+//                        options: [.autoreverse,.repeat],
                         animations: { () -> Void in
                             self.profilePic.transform = CGAffineTransform(translationX: 1000, y: 0.1)
-                            self.profilePic.transform = self.profilePic.transform.translatedBy(x: 1000, y: 0.1)
+                            self.profilePic.removeFromSuperview()
                             
                     }, completion: nil)
                 }
                 else if(degrees <= -50){
                     UIView.animate(withDuration:0.1, delay: 0.0,
-                                   //           Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
-                        //                        options: [.autoreverse,.repeat],
+           //           Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+//                        options: [.autoreverse,.repeat],
                         animations: { () -> Void in
-                            //                            self.profilePic.transform = CGAffineTransform(translationX: 50, y: 0.1)
                             self.profilePic.transform = CGAffineTransform(translationX: -1000, y: 0.1)
-                            self.profilePic.transform = self.profilePic.transform.translatedBy(x: -1000, y: 0.1)
+                            self.profilePic.removeFromSuperview()
                     }, completion: nil)
             }
             
