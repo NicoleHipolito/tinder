@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var doneImage: UIImageView!
+    var fadeTransition: FadeTransition!
     var value: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +30,15 @@ class ProfileViewController: UIViewController {
     @objc func done(_ sender: UITapGestureRecognizer){
         self.performSegue(withIdentifier: "doneSegue", sender: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "toPictureSegue"){
+            let destinationVC = segue.destination as! CardsViewController
+            destinationVC.modalPresentationStyle = UIModalPresentationStyle.custom
+            // Create a new instance of your fadeTransition.
+            fadeTransition = FadeTransition()
+            // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+            destinationVC.transitioningDelegate = fadeTransition
+            fadeTransition.duration = 0.1
+        }
     }
-    */
-
 }

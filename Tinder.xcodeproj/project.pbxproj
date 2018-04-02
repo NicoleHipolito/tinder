@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2841852E206892D700AB1BF6 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841852D206892D700AB1BF6 /* CardsViewController.swift */; };
 		2857C4B820719FEF00EBD71D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857C4B720719FEF00EBD71D /* ProfileViewController.swift */; };
+		2857C4BB2071EA7800EBD71D /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857C4B92071EA7800EBD71D /* BaseTransition.swift */; };
+		2857C4BC2071EA7800EBD71D /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857C4BA2071EA7800EBD71D /* FadeTransition.swift */; };
 		28806EF7206890C70022C0A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28806EF6206890C70022C0A1 /* AppDelegate.swift */; };
 		28806EFC206890C70022C0A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28806EFA206890C70022C0A1 /* Main.storyboard */; };
 		28806EFE206890C80022C0A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28806EFD206890C80022C0A1 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		2841852D206892D700AB1BF6 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		2857C4B720719FEF00EBD71D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2857C4B92071EA7800EBD71D /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTransition.swift; path = "../../../../Downloads/Transition Files/BaseTransition.swift"; sourceTree = "<group>"; };
+		2857C4BA2071EA7800EBD71D /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FadeTransition.swift; path = "../../../../Downloads/Transition Files/FadeTransition.swift"; sourceTree = "<group>"; };
 		28806EF3206890C70022C0A1 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28806EF6206890C70022C0A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28806EFB206890C70022C0A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 		28806EF5206890C70022C0A1 /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				2857C4B92071EA7800EBD71D /* BaseTransition.swift */,
+				2857C4BA2071EA7800EBD71D /* FadeTransition.swift */,
 				2841852C206892B300AB1BF6 /* ViewControllers */,
 				28806EF6206890C70022C0A1 /* AppDelegate.swift */,
 				28806EFA206890C70022C0A1 /* Main.storyboard */,
@@ -271,6 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2857C4B820719FEF00EBD71D /* ProfileViewController.swift in Sources */,
+				2857C4BC2071EA7800EBD71D /* FadeTransition.swift in Sources */,
+				2857C4BB2071EA7800EBD71D /* BaseTransition.swift in Sources */,
 				2841852E206892D700AB1BF6 /* CardsViewController.swift in Sources */,
 				28806EF7206890C70022C0A1 /* AppDelegate.swift in Sources */,
 			);

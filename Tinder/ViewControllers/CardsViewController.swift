@@ -11,7 +11,7 @@ import UIKit
 class CardsViewController: UIViewController {
 
     var cardInitialCenter: CGPoint!
-    
+    var fadeTransition: FadeTransition!
     @IBOutlet weak var profilePic: UIImageView!
     
     override func viewDidLoad() {
@@ -130,6 +130,12 @@ class CardsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "toPictureSegue"){
             let destinationVC = segue.destination as! ProfileViewController
+            destinationVC.modalPresentationStyle = UIModalPresentationStyle.custom
+            // Create a new instance of your fadeTransition.
+            fadeTransition = FadeTransition()
+            // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+            destinationVC.transitioningDelegate = fadeTransition
+            fadeTransition.duration = 0.1
             destinationVC.value = self.profilePic
         }
     }

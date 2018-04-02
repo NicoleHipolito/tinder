@@ -70,24 +70,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eWS-1o-ejR">
-                                <rect key="frame" x="16" y="78" width="343" height="345"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="ghk-Vc-Ngk"/>
-                                    <constraint firstAttribute="height" constant="345" id="pMh-jI-g6U"/>
-                                </constraints>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="nav_bar2" translatesAutoresizingMaskIntoConstraints="NO" id="Sz7-Pi-Ui5">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" image="nav_bar2" translatesAutoresizingMaskIntoConstraints="NO" id="Sz7-Pi-Ui5">
                                 <rect key="frame" x="16" y="-1" width="343" height="65"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eWS-1o-ejR">
+                                <rect key="frame" x="22" y="126" width="332" height="332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="332" id="ghk-Vc-Ngk"/>
+                                    <constraint firstAttribute="height" constant="332" id="pMh-jI-g6U"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xsM-UJ-wkE" firstAttribute="bottom" secondItem="eWS-1o-ejR" secondAttribute="bottom" constant="244" id="4yo-J3-2aW"/>
-                            <constraint firstItem="xsM-UJ-wkE" firstAttribute="trailing" secondItem="eWS-1o-ejR" secondAttribute="trailing" constant="16" id="Rzq-aS-iK6"/>
-                            <constraint firstItem="eWS-1o-ejR" firstAttribute="top" secondItem="xsM-UJ-wkE" secondAttribute="top" constant="58" id="ZWb-68-VYI"/>
-                            <constraint firstItem="eWS-1o-ejR" firstAttribute="leading" secondItem="xsM-UJ-wkE" secondAttribute="leading" constant="16" id="iQo-O0-MLs"/>
+                            <constraint firstItem="eWS-1o-ejR" firstAttribute="centerX" secondItem="FO3-sF-Up3" secondAttribute="centerX" id="CWB-V4-Rec"/>
+                            <constraint firstItem="xsM-UJ-wkE" firstAttribute="bottom" secondItem="eWS-1o-ejR" secondAttribute="bottom" constant="209" id="WGc-yw-IJk"/>
+                            <constraint firstItem="eWS-1o-ejR" firstAttribute="centerX" secondItem="Sz7-Pi-Ui5" secondAttribute="centerX" id="dof-AT-qHc"/>
+                            <constraint firstItem="eWS-1o-ejR" firstAttribute="top" secondItem="Sz7-Pi-Ui5" secondAttribute="bottom" constant="62" id="oPs-5a-Uei"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xsM-UJ-wkE"/>
                     </view>
